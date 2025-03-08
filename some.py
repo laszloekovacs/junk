@@ -15,7 +15,7 @@ def main():
         
         try:
             image = from_file("hand.jpg")
-            print(image)
+            print(term.move_down(12), image)
         except Exception as e:
             print(f"Error displaying image: {e}")
             print("Please ensure 'hand.jpg' exists in the same directory.")
