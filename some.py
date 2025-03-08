@@ -21,7 +21,7 @@ def main():
             print("Please ensure 'hand.jpg' exists in the same directory.")
 
         while True:
-            print(term.move_xy(0, 0) + term.clear_eol + "Select an option:")
+            #print(term.move_xy(0, 0) + term.clear_eol + "Select an option:")
             for i, option in enumerate(options):
                 if i == current_selection:
                     if blink_on:
