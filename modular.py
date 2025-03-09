@@ -62,6 +62,12 @@ class AppManager:
     def run(self):
         """Run the application."""
         while self.current_state:
+            # Check for global key presses (e.g., F1)
+            key = term.inkey(timeout=0.1)  # Non-blocking input with a timeout
+            if key.is_sequence and key.name == "KEY_8":
+                self.transition(MainMenu)  # Transition to MainMenu on F1 press
+
+            # Update the current state
             self.current_state.update()
         print("Exiting...")
 
